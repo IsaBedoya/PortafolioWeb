@@ -1,0 +1,420 @@
+:root{
+    --bgBlack: #1d1d1d;
+    --bgWhite: #fff;
+    --colorBlack: #fff;
+    --colorWhite: #000;
+    --hdBgBlack: #181818;
+    --hdColorBlack: #909096;
+    --hdBgWhite: #b3b3b3;
+    --hdColorWhite: #888888;
+    --details: #3fdee4;
+    --details2: #39c2c7;
+    --details3: #004050;
+    --details4: #650094;
+    --details5: #1e002c;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--bgBlack);
+    color: var(--colorBlack);
+}
+
+p{
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+/* HEADER */
+header{
+    background-color: var(--hdBgBlack);
+    color: var(--hdColorBlack);
+    width: 70px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all .2s ease;
+}
+
+nav{
+    width: 100%;
+}
+
+ul {
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.active{
+    color: var(--details);
+}
+
+.active div, .header__menu a div.active{
+    color: var(--details);
+}
+
+.active span{
+    color: var(--details);
+}
+
+header span, header i{
+    transition: all .2s;
+}
+
+.header__bars span:hover, header i:hover{
+    transition: all .2s;
+    color: var(--details);
+}
+
+.header__complete{
+    width: 150px;
+    transition: all .2s ease;
+}
+
+.header__bars{
+    text-align: center;
+    margin: 20px auto;
+    flex-grow: 1;
+    color: var(--details4)
+}
+
+
+.header__logo{
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header__logo img{
+    display: block;
+}
+
+.header__menu{
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 50px;
+    flex-grow: 6;
+    height: auto;
+    border-top: 1px solid var(--details4);
+    border-bottom: 1px solid var(--details4);
+}
+
+.header__menu p{
+    margin-left: 5px;
+}
+
+.header__menu p.d-none{
+    display: none;
+}
+
+.header__menu a{
+    display: block;
+    color: var(--details4);
+    margin: 30px auto;
+    text-decoration: none;
+    height: 25px;
+}
+
+.header__menu a div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header__menu a div:hover{
+    transition: all .2s ease;
+    color: var(--details);
+}
+
+.header__social{
+    text-align: center;
+    flex-grow: 2;
+    padding: 10px;
+}
+
+.header__social div{
+    font-size: 20px;
+    margin: 10px auto;
+}
+
+
+/* MAIN */
+main{
+    margin: 100px 160px;
+    margin-top: 0;
+    transition: all .2s ease;
+}
+
+.main__min{
+    margin-left: 250px;
+    transition: all .2s ease;
+}
+
+/* FOOTER */
+footer{
+    margin-left: 160px;
+    margin-right: 160px;
+    margin-bottom: 50px;
+    transition: all .2s ease;
+}
+
+/* HOME */
+.home{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home h1{
+    font-weight: 900;
+    font-size: 5rem;
+    margin: 0;
+}
+
+.home h3{
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.home p{
+    width: 50%;
+}
+
+.home a{
+    display: block;
+}
+
+.home a button{
+    padding: 10px;
+    width: 150px;
+    margin-top: 20px;
+    background-color: var(--details);
+    border: 2px solid var(--details2);
+    color: var(--details3);
+}
+
+/* ABOUT ME */
+.me{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.me__text{
+    width: 45%;
+}
+
+.me__text h2{
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+.me h3{
+    font-size: 2rem;
+}
+
+.me__text h3{
+    margin-top: 50px;
+}
+
+.me__info{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--details);
+}
+
+/* WORK */
+.work{
+    height: 100vh;
+    width: 100%;
+}
+
+.work h2{
+    font-weight: 800;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.work p{
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.grid-work{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+.works{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.works img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.works::after{
+    content: "";
+    background-color: #000;
+    transition: all .2s ease-in;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.works:hover::after{
+    opacity: .7;
+}
+
+.grid__texts{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    opacity: 0;
+}
+
+.grid__texts h5{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.grid__texts p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* CONTACT */
+.contact{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+}
+
+.contact__form h2{
+    margin-top: 0;
+}
+
+.contact__map{
+    width: 45%;
+    background-color: var(--details);
+}
+
+.contact h2{
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+form{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, textarea{
+    font-family: monospace;
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 10px;
+    color: var(--colorBlack);
+}
+
+form input:focus, textarea:focus{
+    outline: none;
+}
+
+.form__name{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin-right: 5px;
+    background-color: var(--hdBgBlack);
+}
+
+.form__email{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    background-color: var(--hdBgBlack);
+}
+
+.form__subject{
+    grid-row: 2/3;
+    grid-column: 1/3;
+    background-color: var(--hdBgBlack);
+}
+
+.form__message{
+    grid-row: 3/4;
+    grid-column: 1/3;
+    background-color: var(--hdBgBlack);
+}
+
+.form__submit{
+    width: 40%;
+    margin: auto auto;
+    grid-row: 4/5;
+    grid-column: 1/3;
+    margin-top: 50px;
+    background-color: var(--details);
+    border: 2px solid var(--details2);
+    color: var(--details3);
+}
+
+.home__box button:hover, .form__submit:hover{
+    background-color: var(--details4);
+    color: var(--details5);
+    border: 1px solid var(--details5);
+}
+
+/* FOOTER */
+
+
+/* RESPONSIVE */
